@@ -7,11 +7,10 @@ export default class Form {
     this.input = this.form.querySelector('[type="text"]');
     this.paySystems = document.querySelectorAll(".system");
     this.info = document.querySelector(".valid_info");
-    this.formSubmit = this.formSubmit.bind(this);
     this.form.addEventListener("submit", this.formSubmit);
   }
 
-  formSubmit(e) {
+  formSubmit = (e) => {
     e.preventDefault();
 
     if (this.input.value === "") {
