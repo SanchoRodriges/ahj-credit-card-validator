@@ -1,0 +1,81 @@
+body {
+    color: #999;
+    padding: 0;
+    margin: 0;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.check_card {
+    display: inline-block;
+    padding: 30px;
+    margin: 30px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.pay_systems {
+    display: flex;
+    margin: 20px 0;
+    gap: 5px;
+}
+.pay_systems .system {
+    display: inline-block;
+    width: 63px;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-blend-mode: screen;
+    background-color: #eee;
+}
+.pay_systems .active {
+    background-color: transparent;
+}
+.pay_systems .system .hidden {
+    visibility: hidden;
+}
+.pay_systems .mir {
+    background-image: url(../img/mir.svg);
+}
+.pay_systems .visa {
+    background-image: url(../img/visa.svg);
+}
+.pay_systems .mastercard {
+    background-image: url(../img/mastercard.svg);
+}
+.pay_systems .jcb {
+    background-image: url(../img/jcb.svg);
+}
+.pay_systems .maestro {
+    background-image: url(../img/maestro.svg);
+}
+
+
+.validate-form .card-number {
+    width: 250px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+.validate-form .card-number:focus {
+    outline: 0;
+    border: 1px solid #aaa;
+}
+.validate-form .card-number:active {
+    outline: 0;
+    border: 1px solid #aaa;
+}
+.validate-form .check-btn {
+    width: 80px;
+    padding: 5px;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
