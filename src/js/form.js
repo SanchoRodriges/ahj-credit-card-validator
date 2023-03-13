@@ -4,7 +4,7 @@ import Systems from "./systems";
 export default class Form {
   constructor() {
     this.form = document.querySelector(".validate-form");
-    this.input = this.form.querySelector('[type="text"]');
+    this.input = this.form.querySelector('.card-number');
     this.paySystems = document.querySelectorAll(".system");
     this.info = document.querySelector(".valid_info");
     this.form.addEventListener("submit", this.formSubmit);
@@ -12,6 +12,7 @@ export default class Form {
 
   formSubmit = (e) => {
     e.preventDefault();
+    console.log(this.form);
 
     if (this.input.value === "") {
       this.info.textContent = "Введите номер карты";
