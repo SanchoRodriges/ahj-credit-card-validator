@@ -12,7 +12,6 @@ export default class Form {
 
   formSubmit = (e) => {
     e.preventDefault();
-    console.log(this.form);
 
     if (this.input.value === "") {
       this.info.textContent = "Введите номер карты";
