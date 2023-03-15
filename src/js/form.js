@@ -23,22 +23,30 @@ export default class Form {
       return;
     }
     this.info.textContent = "Корректный номер карты";
+    const system = Systems.check(this.input.value)
     this.activeSystem(Systems.check(this.input.value));
+    console.log(system);
   }
 
   activeSystem(system) {
     let active;
-
+    
     this.paySystems.forEach((e) => {
+
+      // console.log(e);
+      // console.log(e.classList.contains(system));
       if (e.classList.contains("active")) {
         e.classList.remove("active");
       }
-
+      
       if (e.classList.contains(system)) {
         active = e;
       }
     });
 
-    active.classList.add("active");
+    if (active) {
+      active.classList.add("active");
+    }
+    
   }
 }
